@@ -26,7 +26,7 @@
 		display: flex;
 		scroll-snap-type: x mandatory;
 		/* om de snapping scroll te krijgen -->> overflow-x (of y) op scroll */
-		overflow-x: hidden;
+		overflow-x: scroll;
 	}
 
 	section {

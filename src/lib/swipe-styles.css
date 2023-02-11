@@ -1,0 +1,48 @@
+/* #app {
+	height: 100%;
+}
+html,
+body {
+	position: relative;
+	height: 100%;
+}
+
+body {
+	background: #eee;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #000;
+	margin: 0;
+	padding: 0;
+} */
+
+/* dit zijn global styles (vanwege de swiper plugin) */
+/* deze classes werken niet in de component */
+/* de class wordt pas later "gemount" */
+.swiper {
+	/* width: 100%; */
+	/* padding-top: 50px;
+	padding-bottom: 50px; */
+	/* overflow: visible; */
+}
+
+.swiper-slide {
+	background-position: center;
+	background-size: cover;
+	max-width: 400px;
+	/* max-height: 400px; */
+	position: relative;
+}
+
+/* @media (max-width: 500px) {
+	width: ;
+} */
+
+.swiper-slide div {
+	transition: transform cubic-bezier(0.39, 0.575, 0.565, 1) 0.7s;
+}
+
+.swiper-slide div:hover {
+	/* animation: scale-up-center 0.7s cubic-bezier(0.39, 0.575, 0.565, 1) both; */
+	transform: scale(1.1);
+}

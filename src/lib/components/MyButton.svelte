@@ -1,14 +1,18 @@
 <script lang="ts">
 	export let name: string = 'geen Naam';
+	export let link: string | null = null;
+	export let downloadFileName: string | null = null;
 </script>
 
-<button>
-	<span />
-	<span />
-	<span />
-	<span />
-	{name}
-</button>
+<a href={link} download={downloadFileName}>
+	<button>
+		<span />
+		<span />
+		<span />
+		<span />
+		{name}
+	</button>
+</a>
 
 <style>
 	button {

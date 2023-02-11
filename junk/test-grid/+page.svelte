@@ -37,10 +37,6 @@
 		grid-area: content3;
 		background-color: brown;
 	}
-	.content4 {
-		grid-area: content4;
-		background-color: cyan;
-	}
 
 	@media only screen and (max-width: 550px) {
 		.grid-container {
