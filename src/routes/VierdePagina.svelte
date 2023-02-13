@@ -6,6 +6,7 @@
 	// export let data: PageData;
 
 	onMount(() => {
+		// pak de tags met de dataset "data-carousel-button"
 		const buttons = document.querySelectorAll(
 			'[data-carousel-button]'
 		) as NodeListOf<HTMLDataElement>;
@@ -56,6 +57,16 @@
 			<ul data-slides class="slide-list">
 				<!-- middelste slide -->
 				<li class="slide" data-active>
+					<a href="https://github.com/julienvos/portfolio-2">
+						<img
+							src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY3MzkyMjI5NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080"
+							alt="Portfolio Github"
+						/>
+					</a>
+					<h2>Portfolio website</h2>
+				</li>
+
+				<li class="slide" data-right>
 					<a href="/projecten/nieuws-app">
 						<img
 							src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY3MzkwMjgzNA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080"
@@ -65,8 +76,9 @@
 					</a>
 				</li>
 				<!-- eerste rechter slide -->
-				<li class="slide" data-right>
-					<a href="/projecten/regen-analyse"
+				<li class="slide" data-left>
+					<a
+						href="https://colab.research.google.com/drive/1nyFEgZ8NW5m0sy2xwW3X3TYoecPbtNrK?usp=sharing"
 						><img
 							src="https://images.unsplash.com/photo-1442120108414-42e7ea50d0b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY3NTA5MDI2NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080"
 							alt="Voorspelling regenval Australie"
@@ -75,8 +87,9 @@
 					</a>
 				</li>
 				<!-- eerste linker slide -->
-				<li class="slide" data-left>
-					<a href="/projecten/voedselconsumptie"
+				<li class="slide">
+					<a
+						href="https://colab.research.google.com/drive/1yW53G3emb-f2HPWIMQDmPiHbR3XYcXC-?usp=sharing"
 						><img
 							src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY3MzkyMDQ4OA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080"
 							alt="Analyse voedsel globale voedselconsumptie"
@@ -84,6 +97,7 @@
 						<h2>Globale voedselconsumptie</h2>
 					</a>
 				</li>
+
 				<!-- <li class="slide">
 					<img
 						src="https://images.unsplash.com/photo-1675315576622-97bf816e9cd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY3NTM0NzQ3NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080"
@@ -210,8 +224,8 @@
 	.slide[data-active] {
 		opacity: 1;
 		z-index: 1;
-		transition-delay: 200ms;
-		transition: 200ms opacity linear;
+		transition-delay: 800ms;
+		transition: 800ms opacity linear;
 	}
 
 	.slide[data-left] {
