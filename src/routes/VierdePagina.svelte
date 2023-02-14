@@ -62,8 +62,9 @@
 							src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY3MzkyMjI5NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080"
 							alt="Portfolio Github"
 						/>
+
+						<h2>Portfolio website</h2>
 					</a>
-					<h2>Portfolio website</h2>
 				</li>
 
 				<li class="slide" data-right>
@@ -248,6 +249,16 @@
 		object-fit: cover;
 		object-position: center;
 		border-radius: 4em;
+	}
+
+	.slide[data-active] img:hover {
+		transform: scale(1.2);
+		overflow: hidden;
+		transition: 500ms transform linear;
+	}
+	.slide[data-active] img {
+		transition: 500ms transform linear;
+		transform: scale(1);
 	}
 
 	.carousel-button {
