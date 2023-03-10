@@ -6,10 +6,15 @@
 	// export let data: PageData;
 
 	// importeer alle images
-	const imageModules = import.meta.glob('$lib/assets/images/nieuws-app-images/*.png');
+	// const imageModules = import.meta.glob('$lib/assets/images/nieuws-app-images/*.png');
 
 	// haal alle imageUrls op
-	let imageUrls: string[] = Object.keys(imageModules);
+	// let imageUrls: string[] = Object.keys(imageModules);
+
+	let imageUrls: string[] = [
+		'/src/lib/assets/images/nieuws-app-images/Screenshot_1652362499.png',
+		'/src/lib/assets/images/nieuws-app-images/Screenshot_1653059860.png'
+	];
 
 	import '$lib/swiper-cards.css';
 </script>
