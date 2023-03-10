@@ -57,9 +57,9 @@
 	<div slot="app">
 		<swiper-container class="mySwiper" effect="cards" grab-cursor="true">
 			<!-- img src moet in javascript geimporteerd worden -->
-			<!-- {#each imageUrls as item} -->
-			<swiper-slide><img src={theImage} alt="Foto van de app" /></swiper-slide>
-			<!-- {/each} -->
+			{#each imageUrls as item}
+				<swiper-slide><img src={item} alt="Foto van de app" /></swiper-slide>
+			{/each}
 		</swiper-container>
 	</div>
 </DetailPagina>
