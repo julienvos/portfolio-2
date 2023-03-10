@@ -5,25 +5,21 @@
 
 	// export let data: PageData;
 
-	// importeer alle images
-	const imageModules = import.meta.glob('$lib/assets/images/nieuws-app-images/*.png', {
-		as: 'url'
-	});
-	console.log(Object.keys(imageModules));
+	// const imageModules = import.meta.glob('/images/nieuws-app-images/*.png');
+	// console.log(Object.keys(imageModules));
 
-	// for (const path in imageModules) {
-	// 	imageModules[path]().then((mod) => {
-	// 		console.log(path, mod);
-	// 	});
-	// }
-
-	import theImage from '$lib/assets/images/nieuws-app-images/Screenshot_1652362499.png';
-	import secondImage from '$lib/assets/images/nieuws-app-images/Screenshot_1653059860.png';
-	console.log(theImage);
-	// haal alle imageUrls op
-	// let imageUrls: string[] = Object.keys(imageModules);
-
-	let imageUrls: string[] = [theImage, secondImage];
+	// const imageUrls = [
+	// 	import('$lib/assets/images/nieuws-app-images/foto1.png'),
+	// 	import('$lib/assets/images/nieuws-app-images/foto2.png'),
+	// 	import('$lib/assets/images/nieuws-app-images/foto3.png'),
+	// 	import('$lib/assets/images/nieuws-app-images/foto4.png'),
+	// 	import('$lib/assets/images/nieuws-app-images/foto5.png'),
+	// 	import('$lib/assets/images/nieuws-app-images/foto6.png'),
+	// 	import('$lib/assets/images/nieuws-app-images/foto7.png'),
+	// 	import('$lib/assets/images/nieuws-app-images/foto8.png'),
+	// 	import('$lib/assets/images/nieuws-app-images/foto9.png'),
+	// 	import('$lib/assets/images/nieuws-app-images/foto10.png')
+	// ] //.map((url) => import(url)); //importeer de images (import is belangrijk om te converteren naar de production URL)
 
 	import '$lib/swiper-cards.css';
 </script>
@@ -59,8 +55,15 @@
 	<div slot="app">
 		<swiper-container class="mySwiper" effect="cards" grab-cursor="true">
 			<!-- img src moet in javascript geimporteerd worden -->
-			{#each imageUrls as item}
-				<swiper-slide><img src={item} alt="Foto van de app" /></swiper-slide>
+
+			{#each Array.from({ length: 10 }) as _, i}
+				<swiper-slide>
+					<!-- vanaf de static folder -->
+					<img
+						src="/images/nieuws-app-images/foto{i + 1}.png"
+						alt="Foto van de app"
+					/></swiper-slide
+				>
 			{/each}
 		</swiper-container>
 	</div>
