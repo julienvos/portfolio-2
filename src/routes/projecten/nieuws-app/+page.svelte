@@ -6,15 +6,22 @@
 	// export let data: PageData;
 
 	// importeer alle images
-	// const imageModules = import.meta.glob('$lib/assets/images/nieuws-app-images/*.png');
+	const imageModules = import.meta.glob('$lib/assets/images/nieuws-app-images/*.png');
+	// console.log(imageModules);
 
+	// for (const path in imageModules) {
+	// 	imageModules[path]().then((mod) => {
+	// 		console.log(path, mod);
+	// 	});
+	// }
+
+	import theImage from '$lib/assets/images/nieuws-app-images/Screenshot_1652362499.png';
+	import secondImage from '$lib/assets/images/nieuws-app-images/Screenshot_1653059860.png';
+	console.log(theImage);
 	// haal alle imageUrls op
 	// let imageUrls: string[] = Object.keys(imageModules);
 
-	let imageUrls: string[] = [
-		'/src/lib/assets/images/nieuws-app-images/Screenshot_1652362499.png',
-		'/src/lib/assets/images/nieuws-app-images/Screenshot_1653059860.png'
-	];
+	let imageUrls: string[] = [theImage, secondImage];
 
 	import '$lib/swiper-cards.css';
 </script>
@@ -49,9 +56,10 @@
 
 	<div slot="app">
 		<swiper-container class="mySwiper" effect="cards" grab-cursor="true">
-			{#each imageUrls as item}
-				<swiper-slide><img src={item} alt="Foto van de app" /></swiper-slide>
-			{/each}
+			<!-- img src moet in javascript geimporteerd worden -->
+			<!-- {#each imageUrls as item} -->
+			<swiper-slide><img src={theImage} alt="Foto van de app" /></swiper-slide>
+			<!-- {/each} -->
 		</swiper-container>
 	</div>
 </DetailPagina>
