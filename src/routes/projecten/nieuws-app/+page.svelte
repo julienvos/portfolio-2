@@ -9,11 +9,11 @@
 	const imageModules = import.meta.glob('$lib/assets/images/nieuws-app-images/*.png');
 	// console.log(imageModules);
 
-	// for (const path in imageModules) {
-	// 	imageModules[path]().then((mod) => {
-	// 		console.log(path, mod);
-	// 	});
-	// }
+	for (const path in imageModules) {
+		imageModules[path]().then((mod) => {
+			console.log(path, mod);
+		});
+	}
 
 	import theImage from '$lib/assets/images/nieuws-app-images/Screenshot_1652362499.png';
 	import secondImage from '$lib/assets/images/nieuws-app-images/Screenshot_1653059860.png';
